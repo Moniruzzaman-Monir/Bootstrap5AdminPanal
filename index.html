@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap admin dashboard</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap  Icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- Custome CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navbar Star -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <!-- Offcanvas trigger star-->
+            <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <span class="navbar-toggler-icon" data-bs-target="#offcanvasExample"></span>
+            </button>
+            <!-- Offcanvas trigger end-->
+          <a class="navbar-brand fw-bold text-uppercase me-auto" href="#">Admin Dashboard</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            <!-- <form class="d-flex ms-auto">
+                <div class="input-group my-3 my-lg-0">
+                    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-primary" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
+                </div>
+            </form>  -->
+            
+            <ul class="navbar-nav mb-2 mb-lg-0 d-flex ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-envelope-fill fs-5"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-bell-fill fs-5"></i></a>
+              </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="images/Profile.jpg" class="rounded-circle border" alt="Profile" style="height: 30px;">
+                  </a>                  
+                  <ul class="dropdown-menu dropdown-menu-end " aria-labelledby="navbarDropdown">                    
+                    <li><a class="dropdown-item" href="#"><span><i class="bi bi-person-fill fs-5 me-2"></i></span> Profile</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-gear-fill fs-5 me-2"></i></span> Settings</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right fs-5 me-2"></i></span> Logout</a></li>
+                  </ul>
+                </li>
+              </ul>         
+          </div>          
+        </div>
+      </nav>
+    <!-- Navbar End -->
+     
+    <!-- OffCanvas Start -->            
+      <div class="offcanvas offcanvas-start bg-dark text-white sidebar-nav border-top" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        
+        <div class="offcanvas-body p-0">
+          <nav class="navbar-dark">
+            <ul class="navbar-nav">
+
+              <li>
+                <a href="#" class="nav-link active px-3 mt-3">
+                  <span class="me-2"><i class="bi bi-speedometer2"></i></span>
+                  <span>Dashboard</span>
+                </a>
+              </li>
+
+              <li class="my-1">
+                <hr class="dropdown-divider">
+              </li>
+
+              <li>
+                <div class="text-muted small fw-bold text-uppercase px-3">WooCommerce</div>
+              </li>
+              <li>
+                <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                  <span class="me-2"><i class="bi bi-shop"></i></span>
+                  <span>WooCommerce</span>
+                  <span class="right-icon ms-auto"><i class="bi bi-chevron-down"></i></span>
+                </a>
+                <div class="collapse" id="collapseExample">
+                  <div>
+                    <ul class="navbar-nav ps-3">
+                      <li>
+                        <a href="#" class="nav-link px-3">
+                          <span class="me-2"><i class="bi bi-speedometer2"></i></span>
+                          <span>Nasted Link</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#products" role="button" aria-expanded="false" aria-controls="products">
+                  <span class="me-2"><i class="bi bi-basket2"></i></span>
+                  <span>Products</span>
+                  <span class="right-icon ms-auto"><i class="bi bi-chevron-down"></i></span>
+                </a>
+                <div class="collapse" id="products">
+                  <div>
+                    <ul class="navbar-nav ps-3">
+                      <li>
+                        <a href="#" class="nav-link px-3">
+                          <span class="me-2"><i class="bi bi-cart4"></i></span><span>All Product & Manage</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="nav-link px-3">
+                          <span class="me-2"><i class="bi bi-cart-plus"></i></span><span>Add New</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="nav-link px-3">
+                          <span class="me-2"><i class="bi bi-bar-chart-steps"></i></span><span>Categories</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li class="my-1">
+                <hr class="dropdown-divider">
+              </li>
+
+              <li>
+                <div class="text-muted small fw-bold text-uppercase px-3">Theme Option</div>
+              </li>
+
+              <li>
+                <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#theme" role="button" aria-expanded="false" aria-controls="theme">
+                  <span class="me-2"><i class="bi bi-window-split"></i></span>
+                  <span>layout</span>
+                  <span class="right-icon ms-auto"><i class="bi bi-chevron-down"></i></span>
+                </a>
+                <div class="collapse" id="theme">
+                  <div>
+                    <ul class="navbar-nav ps-3">
+                      <li>
+                        <a href="#" class="nav-link px-3">
+                          <span class="me-2"><i class="bi bi-file"></i></span>
+                          <span>Page1</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="nav-link px-3">
+                          <span class="me-2"><i class="bi bi-sliders2-vertical"></i></span>
+                          <span>Settings</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              
+            </ul>
+          </nav>
+        </div>
+
+      </div>
+    <!-- OffCanvas End -->
+
+      <main class="mt-5 pt-3">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12 fw-bold fs-3">All Product And Manage</div>
+          </div>
+        </div>
+
+        <div class="container-fluid mt-3">
+          <div class="row">
+            <div class="col-md-12">
+
+              <table class="table table-hover table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col">Images</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Stock</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Categories</th>
+                    <th scope="col"><i class="bi bi-star-fill fs-5"></i></th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="font-size: 13px;">
+                    <th><img src="images/Profile.jpg" alt="" style="height: 45px;"></th>
+                    <th>Mo Salah Inspired Christmas Classic T-Shirt</th>
+                    <th class="text-primary">In stock</th>
+                    <th>$ 1050 <br><del>$ 1200</del></th>
+                    <th>T-Shart</th>
+                    <th><i class="bi bi-star text-primary fs-5"></i></th>
+                    <th>Published <br>2020/08/02</th>
+                    <th><i class="bi bi-bar-chart-fill text-primary fs-5"></i></th>
+                    <th>
+                      <div class="">
+                        <button type="submit" value="Edit" class="btn btn-primary"><i class="bi bi-pencil-square"></i></button>
+                        <button type="submit" class="btn btn-danger"><i class="bi bi-trash3-fill"></i></button>
+                      </div>
+                    </th>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+        </div>
+      </main>
+
+
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
